@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Sep  3 22:50:23 2026
+# Process ID         : 12856
+# Current directory  : C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent13024 C:\repo\FPGA\SoC_301\2_GROUND_WORK\1_PL_BASIC\1_LED_SWITCH_CONTROL\1_LED_SWITCH_CONTROL.xpr
+# Log file           : C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/vivado.log
+# Journal file       : C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL\vivado.jou
+# Running On         : DESKTOP-21HL77P
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11700T @ 1.40GHz
+# CPU Frequency      : 1392 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16873 MB
+# Swap memory        : 11274 MB
+# Total Virtual      : 28148 MB
+# Available Virtual  : 9185 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/1_LED_SWITCH_CONTROL.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/1_LED_SWITCH_CONTROL.runs/impl_1/led_switch_control.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/1_LED_SWITCH_CONTROL.runs/impl_1/led_switch_control.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/1_LED_SWITCH_CONTROL.runs/impl_1/led_switch_control.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/1_LED_SWITCH_CONTROL.runs/impl_1/led_switch_control.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+reset_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/repo/FPGA/SoC_301/2_GROUND_WORK/1_PL_BASIC/1_LED_SWITCH_CONTROL/1_LED_SWITCH_CONTROL.runs/impl_1/led_switch_control.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
