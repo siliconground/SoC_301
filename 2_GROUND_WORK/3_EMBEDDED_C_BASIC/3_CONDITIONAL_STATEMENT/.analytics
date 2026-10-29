@@ -1,0 +1,8 @@
+timestamp=[2026-10-29 21:46:09], mode=WORKBENCH_START, duration=0:00:04.651, duration_ms=4651, data={}
+timestamp=[2026-10-29 21:46:10], mode=WORKBENCH_UI_INIT, duration=0:00:00.456, duration_ms=456, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2026-10-29 21:46:10], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.042, duration_ms=42, data={}
+timestamp=[2026-10-29 21:47:09], mode=APP_CREATION, duration=0:00:16.111, duration_ms=16111, data={name=conditional_statement, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=USART_HW_wrapper, application_type=application}
+timestamp=[2026-10-29 21:47:29], mode=PLATFORM_GENERATION, duration=0:00:13.943, duration_ms=13943, data={name=USART_HW_wrapper}
+timestamp=[2026-10-29 21:47:30], mode=BUILD, duration=0:00:01.355, duration_ms=1355, data={name=conditional_statement, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 21:47:37], mode=BUILD, duration=0:00:06.318, duration_ms=6318, data={name=conditional_statement_system, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 21:55:16], mode=BUILD, duration=0:00:00.999, duration_ms=999, data={name=conditional_statement, configuration=Debug, clean_build=false}

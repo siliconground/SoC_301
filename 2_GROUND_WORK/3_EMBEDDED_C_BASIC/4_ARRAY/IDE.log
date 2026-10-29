@@ -1,0 +1,230 @@
+21:56:42 DEBUG : Logs will be stored at 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/IDE.log'.
+21:56:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\REPO\SoC_301\2_GROUND_WORK\3_EMBEDDED_C_BASIC\4_ARRAY\temp_xsdb_launch_script.tcl
+21:56:45 INFO  : Platform repository initialization has completed.
+21:56:45 INFO  : Registering command handlers for Vitis TCF services
+21:56:47 INFO  : XSCT server has started successfully.
+21:56:47 INFO  : plnx-install-location is set to ''
+21:56:47 INFO  : Successfully done setting XSCT server connection channel  
+21:56:47 INFO  : Successfully done query RDI_DATADIR 
+21:56:47 INFO  : Successfully done setting workspace for the tool. 
+21:57:41 INFO  : Result from executing command 'getProjects': USART_HW_wrapper
+21:57:41 INFO  : Result from executing command 'getPlatforms': 
+21:57:42 WARN  : An unexpected exception occurred in the module 'platform project logging'
+21:57:42 INFO  : Platform 'USART_HW_wrapper' is added to custom repositories.
+21:57:49 INFO  : Platform 'USART_HW_wrapper' is added to custom repositories.
+22:03:50 INFO  : Result from executing command 'getProjects': USART_HW_wrapper
+22:03:50 INFO  : Result from executing command 'getPlatforms': USART_HW_wrapper|C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/USART_HW_wrapper.xpfm
+22:03:50 INFO  : Checking for BSP changes to sync application flags for project 'array'...
+22:04:01 INFO  : Checking for BSP changes to sync application flags for project 'array'...
+22:05:31 INFO  : Checking for BSP changes to sync application flags for project 'array'...
+22:05:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:43 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:05:43 INFO  : 'jtag frequency' command is executed.
+22:05:43 INFO  : Context for 'APU' is selected.
+22:05:43 INFO  : System reset is completed.
+22:05:46 INFO  : 'after 3000' command is executed.
+22:05:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+22:05:48 INFO  : Device configured successfully with "C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit"
+22:05:48 INFO  : Context for 'APU' is selected.
+22:05:48 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa'.
+22:05:48 INFO  : 'configparams force-mem-access 1' command is executed.
+22:05:48 INFO  : Context for 'APU' is selected.
+22:05:48 INFO  : Sourcing of 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl' is done.
+22:05:49 INFO  : 'ps7_init' command is executed.
+22:05:49 INFO  : 'ps7_post_config' command is executed.
+22:05:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:49 INFO  : The application 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:05:49 INFO  : 'configparams force-mem-access 0' command is executed.
+22:05:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:05:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:05:49 INFO  : 'con' command is executed.
+22:05:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:05:49 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\2_GROUND_WORK\3_EMBEDDED_C_BASIC\4_ARRAY\array_system\_ide\scripts\debugger_array-default.tcl'
+22:08:55 INFO  : Checking for BSP changes to sync application flags for project 'array'...
+22:09:13 INFO  : Disconnected from the channel tcfchan#2.
+22:09:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:14 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:09:14 ERROR : port closed
+22:09:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:09:14 ERROR : port closed
+22:09:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:23 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:09:23 INFO  : 'jtag frequency' command is executed.
+22:09:23 INFO  : Context for 'APU' is selected.
+22:09:23 INFO  : System reset is completed.
+22:09:26 INFO  : 'after 3000' command is executed.
+22:09:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+22:09:28 INFO  : Device configured successfully with "C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit"
+22:09:28 INFO  : Context for 'APU' is selected.
+22:09:28 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa'.
+22:09:28 INFO  : 'configparams force-mem-access 1' command is executed.
+22:09:28 INFO  : Context for 'APU' is selected.
+22:09:28 INFO  : Sourcing of 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl' is done.
+22:09:29 INFO  : 'ps7_init' command is executed.
+22:09:29 INFO  : 'ps7_post_config' command is executed.
+22:09:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:29 INFO  : The application 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:09:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:09:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:09:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:29 INFO  : 'con' command is executed.
+22:09:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:09:29 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\2_GROUND_WORK\3_EMBEDDED_C_BASIC\4_ARRAY\array_system\_ide\scripts\debugger_array-default.tcl'
+22:10:24 INFO  : Checking for BSP changes to sync application flags for project 'array'...
+22:10:34 INFO  : Disconnected from the channel tcfchan#3.
+22:10:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:10:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:10:35 ERROR : port closed
+22:10:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:10:35 ERROR : port closed
+22:10:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:10:42 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:10:42 INFO  : 'jtag frequency' command is executed.
+22:10:42 INFO  : Context for 'APU' is selected.
+22:10:42 INFO  : System reset is completed.
+22:10:45 INFO  : 'after 3000' command is executed.
+22:10:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+22:10:47 INFO  : Device configured successfully with "C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit"
+22:10:47 INFO  : Context for 'APU' is selected.
+22:10:47 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa'.
+22:10:47 INFO  : 'configparams force-mem-access 1' command is executed.
+22:10:47 INFO  : Context for 'APU' is selected.
+22:10:47 INFO  : Sourcing of 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl' is done.
+22:10:48 INFO  : 'ps7_init' command is executed.
+22:10:48 INFO  : 'ps7_post_config' command is executed.
+22:10:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:10:48 INFO  : The application 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:10:48 INFO  : 'configparams force-mem-access 0' command is executed.
+22:10:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:10:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:10:48 INFO  : 'con' command is executed.
+22:10:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:10:48 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\2_GROUND_WORK\3_EMBEDDED_C_BASIC\4_ARRAY\array_system\_ide\scripts\debugger_array-default.tcl'
+22:12:19 INFO  : Checking for BSP changes to sync application flags for project 'array'...
+22:12:27 INFO  : Disconnected from the channel tcfchan#4.
+22:12:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:12:28 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:12:28 ERROR : port closed
+22:12:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:12:28 ERROR : port closed
+22:12:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:12:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+22:12:32 INFO  : 'jtag frequency' command is executed.
+22:12:32 INFO  : Context for 'APU' is selected.
+22:12:33 INFO  : System reset is completed.
+22:12:36 INFO  : 'after 3000' command is executed.
+22:12:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+22:12:38 INFO  : Device configured successfully with "C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit"
+22:12:38 INFO  : Context for 'APU' is selected.
+22:12:38 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa'.
+22:12:38 INFO  : 'configparams force-mem-access 1' command is executed.
+22:12:38 INFO  : Context for 'APU' is selected.
+22:12:38 INFO  : Sourcing of 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl' is done.
+22:12:38 INFO  : 'ps7_init' command is executed.
+22:12:38 INFO  : 'ps7_post_config' command is executed.
+22:12:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:12:39 INFO  : The application 'C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:12:39 INFO  : 'configparams force-mem-access 0' command is executed.
+22:12:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/bitstream/USART_HW_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/USART_HW_wrapper/export/USART_HW_wrapper/hw/USART_HW_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/4_ARRAY/array/Debug/array.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:12:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:12:39 INFO  : 'con' command is executed.
+22:12:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:12:39 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\2_GROUND_WORK\3_EMBEDDED_C_BASIC\4_ARRAY\array_system\_ide\scripts\debugger_array-default.tcl'
+22:13:02 INFO  : Disconnected from the channel tcfchan#5.
