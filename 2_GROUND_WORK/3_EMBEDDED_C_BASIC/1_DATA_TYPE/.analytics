@@ -29,3 +29,6 @@ timestamp=[2026-10-29 21:24:01], mode=BUILD, duration=0:00:01.088, duration_ms=1
 timestamp=[2026-10-29 21:24:52], mode=BUILD, duration=0:00:01.142, duration_ms=1142, data={name=data_type, configuration=Debug, clean_build=false}
 timestamp=[2026-10-29 21:26:33], mode=BUILD, duration=0:00:01.892, duration_ms=1892, data={name=data_type, configuration=Debug, clean_build=false}
 timestamp=[2026-10-29 21:29:43], mode=BUILD, duration=0:00:01.062, duration_ms=1062, data={name=data_type, configuration=Debug, clean_build=false}
+timestamp=[2026-10-29 22:23:34], mode=WORKBENCH_START, duration=0:00:06.205, duration_ms=6205, data={}
+timestamp=[2026-10-29 22:23:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.062, duration_ms=62, data={}
+timestamp=[2026-10-29 22:23:35], mode=WORKBENCH_UI_INIT, duration=0:00:00.822, duration_ms=822, data={editors_count=1, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,USART_HW_wrapper,data_type,data_type_system}
