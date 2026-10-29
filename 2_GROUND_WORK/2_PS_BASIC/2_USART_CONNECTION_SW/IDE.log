@@ -118,3 +118,4 @@ con
 
 23:35:08 INFO  : Launch script is exported to file 'C:\repo\SOC\SoC_301\2_GROUND_WORK\2_PS_BASIC\2_USART_CONNECTION_SW\USART_system\_ide\scripts\systemdebugger_usart_system_standalone.tcl'
 23:36:30 INFO  : Disconnected from the channel tcfchan#1.
+00:30:24 DEBUG : Logs will be stored at 'C:/REPO/SoC_301/2_GROUND_WORK/2_PS_BASIC/2_USART_CONNECTION_SW/IDE.log'.

@@ -26,18 +26,30 @@ int main()
 {
     init_platform();
 
-    printf(" Size of Data Types\n\r");
-    printf("Size of char: %dbyte\n\r", sizeof(char));
-    printf("Size of int: %dbyte\n\r", sizeof(int));
-    printf("Size of short: %dbyte\n\r", sizeof(short));
-    printf("Size of long: %dbyte\n\r", sizeof(long));
-    printf("Size of float: %dbyte\n\r", sizeof(float));
-    printf("Size of double: %dbyte\n\r", sizeof(double));
+    /* 1.Data types and their size */
+    xil_printf("\x1B[2J\x1B[H"); // clear the terminal screen
 
-    printf("Float Number : %f\n\r", 3.14);
-    while(1){}
+    xil_printf("------- Size of Data Types------- \n\r");
+    xil_printf("Size of char : %d Byte\n\r", sizeof(char));
+    xil_printf("Size of int	: %d Byte\n\r", sizeof(int));
+    xil_printf("Size of short : %d Byte\n\r", sizeof(short));
+    xil_printf("Size of long : %d Byte\n\r", sizeof(long));
+    xil_printf("Size of float : %d Byte\n\r", sizeof(float));
+    xil_printf("Size of double : %d Byte\n\r", sizeof(double));
+    xil_printf("------- Size of Data Types------- \n\r");
 
-
+    /* 2. Print data types*/
+    char str[100] ="Hello World";
+    xil_printf("------- Display Data Types------- \n\r");
+    xil_printf("Integer: %d\n\r", 128);
+//    xil_printf("Float: %f\n\r", 3.14f);
+    printf("Float: %f\n\r", 3.14f);
+    xil_printf("String: %s\n\r", str);
+    xil_printf("Character: %c\n\r", 0x41); // ASCII Code for 'A'
+    xil_printf("------- Display Data Types------- \n\r");
+    while(1){
+    	// nothing to execute
+    }
     cleanup_platform();
     return 0;
 }
