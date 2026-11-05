@@ -1,0 +1,38 @@
+23:41:57 **** Incremental Build of configuration Debug for project function ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/5_FUNCTION/USART_HW_wrapper/export/USART_HW_wrapper/sw/USART_HW_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:30:9: warning: implicit declaration of function 'enable_caches' [-Wimplicit-function-declaration]
+   30 |         enable_caches();
+      |         ^~~~~~~~~~~~~
+../src/helloworld.c:31:9: warning: implicit declaration of function 'init_uart' [-Wimplicit-function-declaration]
+   31 |         init_uart();
+      |         ^~~~~~~~~
+../src/helloworld.c:37:17: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   37 |                 sleep(2);
+      |                 ^~~~~
+../src/helloworld.c:40:9: warning: implicit declaration of function 'disable_caches' [-Wimplicit-function-declaration]
+   40 |         disable_caches();
+      |         ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: function.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/REPO/SoC_301/2_GROUND_WORK/3_EMBEDDED_C_BASIC/5_FUNCTION/USART_HW_wrapper/export/USART_HW_wrapper/sw/USART_HW_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "function.elf"  ./src/clear.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: function.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size function.elf  |tee "function.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27561	   1416	  22960	  51937	   cae1	function.elf
+'Finished building: function.elf.size'
+' '
+
+23:41:59 Build Finished (took 1s.338ms)
+
