@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Nov  8 23:48:05 2026
+# Process ID         : 456
+# Current directory  : C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/1_PL/1_PL.runs/PMOD_LED4_axi_smc_0_synth_1
+# Command line       : vivado.exe -log PMOD_LED4_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PMOD_LED4_axi_smc_0.tcl
+# Log file           : C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/1_PL/1_PL.runs/PMOD_LED4_axi_smc_0_synth_1/PMOD_LED4_axi_smc_0.vds
+# Journal file       : C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/1_PL/1_PL.runs/PMOD_LED4_axi_smc_0_synth_1\vivado.jou
+# Running On         : WILLIAM-MAIN
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-11700T @ 1.40GHz
+# CPU Frequency      : 1392 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16873 MB
+# Swap memory        : 5217 MB
+# Total Virtual      : 22091 MB
+# Available Virtual  : 2465 MB
+#-----------------------------------------------------------
+source PMOD_LED4_axi_smc_0.tcl -notrace

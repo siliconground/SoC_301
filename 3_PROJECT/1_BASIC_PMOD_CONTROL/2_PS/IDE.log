@@ -1,0 +1,175 @@
+23:53:40 DEBUG : Logs will be stored at 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/IDE.log'.
+23:53:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\temp_xsdb_launch_script.tcl
+23:53:43 INFO  : Platform repository initialization has completed.
+23:53:43 INFO  : Registering command handlers for Vitis TCF services
+23:53:47 INFO  : XSCT server has started successfully.
+23:53:52 INFO  : plnx-install-location is set to ''
+23:53:52 INFO  : Successfully done setting XSCT server connection channel  
+23:53:52 INFO  : Successfully done query RDI_DATADIR 
+23:53:52 INFO  : Successfully done setting workspace for the tool. 
+23:54:36 INFO  : Result from executing command 'getProjects': PMOD_LED4_wrapper
+23:54:36 INFO  : Result from executing command 'getPlatforms': 
+23:54:36 WARN  : An unexpected exception occurred in the module 'platform project logging'
+23:54:37 INFO  : Platform 'PMOD_LED4_wrapper' is added to custom repositories.
+23:54:47 INFO  : Platform 'PMOD_LED4_wrapper' is added to custom repositories.
+23:55:16 INFO  : Result from executing command 'getProjects': PMOD_LED4_wrapper
+23:55:16 INFO  : Result from executing command 'getPlatforms': PMOD_LED4_wrapper|C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/PMOD_LED4_wrapper.xpfm
+23:55:17 INFO  : Checking for BSP changes to sync application flags for project 'pmod_basic'...
+23:55:46 INFO  : Checking for BSP changes to sync application flags for project 'pmod_basic'...
+23:57:07 INFO  : Checking for BSP changes to sync application flags for project 'pmod_basic'...
+23:57:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:57:42 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+23:57:42 INFO  : 'jtag frequency' command is executed.
+23:57:42 INFO  : Context for 'APU' is selected.
+23:57:42 INFO  : System reset is completed.
+23:57:45 INFO  : 'after 3000' command is executed.
+23:57:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+23:57:47 INFO  : Device configured successfully with "C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit"
+23:57:47 INFO  : Context for 'APU' is selected.
+23:57:48 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa'.
+23:57:48 INFO  : 'configparams force-mem-access 1' command is executed.
+23:57:48 INFO  : Context for 'APU' is selected.
+23:57:48 INFO  : Sourcing of 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl' is done.
+23:57:48 INFO  : 'ps7_init' command is executed.
+23:57:48 INFO  : 'ps7_post_config' command is executed.
+23:57:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:57:48 INFO  : The application 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:57:48 INFO  : 'configparams force-mem-access 0' command is executed.
+23:57:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:57:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:57:48 INFO  : 'con' command is executed.
+23:57:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:57:48 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\pmod_basic_system\_ide\scripts\debugger_pmod_basic-default.tcl'
+00:00:04 INFO  : Checking for BSP changes to sync application flags for project 'pmod_basic'...
+00:00:17 INFO  : Disconnected from the channel tcfchan#3.
+00:00:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:00:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+00:00:19 ERROR : port closed
+00:00:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:00:19 ERROR : port closed
+00:00:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:00:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+00:00:24 INFO  : 'jtag frequency' command is executed.
+00:00:24 INFO  : Context for 'APU' is selected.
+00:00:24 INFO  : System reset is completed.
+00:00:27 INFO  : 'after 3000' command is executed.
+00:00:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+00:00:29 INFO  : Device configured successfully with "C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit"
+00:00:29 INFO  : Context for 'APU' is selected.
+00:00:29 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa'.
+00:00:29 INFO  : 'configparams force-mem-access 1' command is executed.
+00:00:29 INFO  : Context for 'APU' is selected.
+00:00:29 INFO  : Sourcing of 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl' is done.
+00:00:30 INFO  : 'ps7_init' command is executed.
+00:00:30 INFO  : 'ps7_post_config' command is executed.
+00:00:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:00:30 INFO  : The application 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:00:30 INFO  : 'configparams force-mem-access 0' command is executed.
+00:00:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:00:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:00:30 INFO  : 'con' command is executed.
+00:00:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:00:30 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\pmod_basic_system\_ide\scripts\debugger_pmod_basic-default.tcl'
+00:01:47 INFO  : Checking for BSP changes to sync application flags for project 'pmod_basic'...
+00:02:15 INFO  : Disconnected from the channel tcfchan#4.
+00:02:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:02:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+00:02:16 ERROR : port closed
+00:02:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+00:02:16 ERROR : port closed
+00:02:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:02:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+00:02:21 INFO  : 'jtag frequency' command is executed.
+00:02:21 INFO  : Context for 'APU' is selected.
+00:02:21 INFO  : System reset is completed.
+00:02:24 INFO  : 'after 3000' command is executed.
+00:02:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+00:02:26 INFO  : Device configured successfully with "C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit"
+00:02:27 INFO  : Context for 'APU' is selected.
+00:02:27 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa'.
+00:02:27 INFO  : 'configparams force-mem-access 1' command is executed.
+00:02:27 INFO  : Context for 'APU' is selected.
+00:02:27 INFO  : Sourcing of 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl' is done.
+00:02:27 INFO  : 'ps7_init' command is executed.
+00:02:27 INFO  : 'ps7_post_config' command is executed.
+00:02:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:02:27 INFO  : The application 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:02:27 INFO  : 'configparams force-mem-access 0' command is executed.
+00:02:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:02:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:02:27 INFO  : 'con' command is executed.
+00:02:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:02:27 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\pmod_basic_system\_ide\scripts\debugger_pmod_basic-default.tcl'
+00:07:52 INFO  : Disconnected from the channel tcfchan#5.
