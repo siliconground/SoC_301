@@ -173,3 +173,59 @@ con
 
 00:02:27 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\pmod_basic_system\_ide\scripts\debugger_pmod_basic-default.tcl'
 00:07:52 INFO  : Disconnected from the channel tcfchan#5.
+23:14:41 DEBUG : Logs will be stored at 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/IDE.log'.
+23:14:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\temp_xsdb_launch_script.tcl
+23:14:46 INFO  : Platform repository initialization has completed.
+23:14:46 INFO  : Registering command handlers for Vitis TCF services
+23:14:48 INFO  : XSCT server has started successfully.
+23:14:48 INFO  : Successfully done setting XSCT server connection channel  
+23:14:48 INFO  : Checking for BSP changes to sync application flags for project 'pmod_basic'...
+23:14:54 INFO  : plnx-install-location is set to ''
+23:14:54 INFO  : Successfully done setting workspace for the tool. 
+23:14:56 INFO  : Successfully done query RDI_DATADIR 
+23:15:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:15:03 INFO  : Jtag cable 'Digilent Zybo Z7 210351BDF8EBA' is selected.
+23:15:03 INFO  : 'jtag frequency' command is executed.
+23:15:03 INFO  : Context for 'APU' is selected.
+23:15:03 INFO  : System reset is completed.
+23:15:06 INFO  : 'after 3000' command is executed.
+23:15:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}' command is executed.
+23:15:09 INFO  : Device configured successfully with "C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit"
+23:15:09 INFO  : Context for 'APU' is selected.
+23:15:09 INFO  : Hardware design and registers information is loaded from 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa'.
+23:15:09 INFO  : 'configparams force-mem-access 1' command is executed.
+23:15:09 INFO  : Context for 'APU' is selected.
+23:15:09 INFO  : Sourcing of 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl' is done.
+23:15:09 INFO  : 'ps7_init' command is executed.
+23:15:09 INFO  : 'ps7_post_config' command is executed.
+23:15:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:10 INFO  : The application 'C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:15:10 INFO  : 'configparams force-mem-access 0' command is executed.
+23:15:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351BDF8EBA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351BDF8EBA-23727093-0"}
+fpga -file C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/bitstream/PMOD_LED4_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/PMOD_LED4_wrapper/export/PMOD_LED4_wrapper/hw/PMOD_LED4_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/REPO/SoC_301/3_PROJECT/1_BASIC_PMOD_CONTROL/2_PS/pmod_basic/Debug/pmod_basic.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+23:15:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:15:10 INFO  : 'con' command is executed.
+23:15:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+23:15:10 INFO  : Launch script is exported to file 'C:\REPO\SoC_301\3_PROJECT\1_BASIC_PMOD_CONTROL\2_PS\pmod_basic_system\_ide\scripts\debugger_pmod_basic-default.tcl'
+23:15:27 INFO  : Disconnected from the channel tcfchan#1.

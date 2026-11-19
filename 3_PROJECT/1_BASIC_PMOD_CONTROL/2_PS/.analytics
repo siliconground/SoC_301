@@ -9,3 +9,7 @@ timestamp=[2026-11-08 23:55:47], mode=BUILD, duration=0:00:00.455, duration_ms=4
 timestamp=[2026-11-08 23:57:08], mode=BUILD, duration=0:00:01.089, duration_ms=1089, data={name=pmod_basic, configuration=Debug, clean_build=false}
 timestamp=[2026-11-09 00:00:05], mode=BUILD, duration=0:00:00.386, duration_ms=386, data={name=pmod_basic, configuration=Debug, clean_build=false}
 timestamp=[2026-11-09 00:01:48], mode=BUILD, duration=0:00:01.060, duration_ms=1060, data={name=pmod_basic, configuration=Debug, clean_build=false}
+timestamp=[2026-11-12 23:14:44], mode=WORKBENCH_START, duration=0:00:09.392, duration_ms=9392, data={}
+timestamp=[2026-11-12 23:14:46], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.159, duration_ms=159, data={}
+timestamp=[2026-11-12 23:14:46], mode=WORKBENCH_UI_INIT, duration=0:00:01.130, duration_ms=1130, data={editors_count=1, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=PMOD_LED4_wrapper,RemoteSystemsTempFiles,pmod_basic,pmod_basic_system}
+timestamp=[2026-11-12 23:14:57], mode=BUILD, duration=0:00:00.578, duration_ms=578, data={name=pmod_basic, configuration=Debug, clean_build=false}
